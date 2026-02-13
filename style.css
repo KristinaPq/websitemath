@@ -1,0 +1,541 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-word: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bg-light {
+    background: #5b9de0;
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #5b9de0;
+    height: 70px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #3a4d5a;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(247, 245, 245, 0.6), rgba(244, 241, 241, 0.6)), url('https://images.unsplash.com') center/cover;
+    color: rgb(49, 46, 46);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: #4ca3dd;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Сетка карточек (для планшетов и ПК) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* АДАПТИВНОСТЬ */
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Карточки в одну колонку */
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 70px;
+        background: #5b9de0;
+        flex-direction: column;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .nav-links li {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Показываем бургер */
+}
+
+/* Активный класс для мобильного меню */
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+.hero {
+    position: relative;
+    /* Для позиционирования холста внутри */
+    height: 100vh;
+    background: #0f172a;
+    /* Темный глубокий цвет (стиль кода) */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#canvas-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Фон снизу */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Текст сверху */
+    text-align: center;
+    /* Добавим эффект плавного появления текста */
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Анимация появления контента */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+/* Стили для текста внутри Hero-секции */
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    /* Добавляем 40 пикселей пустого пространства снизу */
+    color: #cbd5e1;
+    /* Сделаем текст чуть мягче по цвету */
+}
+
+/* Стили для кнопки, чтобы она выглядела аккуратнее */
+.hero-content .btn {
+    display: inline-block;
+    /* Важно для корректных отступов */
+    padding: 15px 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.hero-content .btn:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+    /* Кнопка чуть увеличится */
+}
+
+.hero-content p {
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Стили футера */
+.footer {
+    background-color: #0f172a;
+    /* Тот же цвет, что у canvas в начале */
+    color: #ffffff;
+    /* Белый текст */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer h2 {
+    color: #3498db;
+    /* Акцентный голубой для заголовка */
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #cbd5e1;
+    /* Светло-серый для мягкости */
+}
+
+.contact-info strong {
+    color: #ffffff;
+    /* Выделяем контакты белым */
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Тонкая разделительная линия */
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+
+
+
+/* Контейнер для ограничения ширины */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* Сетка для раздела О нас */
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.features-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Стили карточек внутри О нас */
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+    background: #f1f5f9;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #3498db;
+    margin-right: 20px;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+}
+
+.feature-text h3 {
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+}
+
+/* Сетка карточек */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Стили для технологий программирования */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Цвета для разных технологий */
+.html {
+    background: #E34F26;
+}
+
+.css {
+    background: #1572B6;
+}
+
+.js {
+    background: #F7DF1E;
+    color: #000;
+}
+
+.java {
+    background: #007396;
+}
+
+.sql {
+    background: #4479A1;
+}
+
+.python {
+    background: #3776AB;
+}
+
+/* Простые теги для математики и информатики */
+.tags span {
+    display: inline-block;
+    background: #e2e8f0;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin: 4px;
+}
+
+/* Особое выделение для карточки программирования */
+.featured-card {
+    border: 2px solid #3498db;
+    background: #f0f9ff;
+}
+
+.price-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.price-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 320px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Эффект при наведении */
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Выделение популярного тарифа */
+.price-card.popular {
+    border: 2px solid #3498db;
+    transform: scale(1.05);
+    z-index: 5;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3498db;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.amount span {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: normal;
+}
+
+.price-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.price-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+
+.price-features li::before {
+    content: "✓";
+    color: #3498db;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Кнопки в тарифах */
+.price-btn {
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.price-btn.featured {
+    background: #3498db;
+    color: white;
+}
+
+.price-btn:hover {
+    background: #2980b9;
+    color: white;
+    border-color: #2980b9;
+}
+
+.price-note {
+    margin-top: 40px;
+    color: #64748b;
+    font-style: italic;
+}

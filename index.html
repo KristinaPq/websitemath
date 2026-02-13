@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор по математике и IT в Москве — Подготовка к ЕГЭ/ОГЭ</title>
+    <meta name="description"
+        content="Индивидуальные занятия по математике и программированию. Подготовка к экзаменам, Frontend-разработка и Python для детей. Запишитесь на бесплатный урок!">
+
+    <!-- Иконка-эмодзи во вкладке браузера -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">IT-Tutor</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#prices">Цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный экран с анимацией -->
+    <section id="home" class="hero">
+        <canvas id="canvas-lines"></canvas>
+        <div class="hero-content">
+            <h1>Математика & Программирование</h1>
+            <p>Логика. Код. Результат.</p>
+            <a href="#contact" class="btn">Записаться на урок</a>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Математика и IT: Фундамент будущего</h2>
+            <div class="about-grid">
+                <!-- Текстовое описание -->
+                <div class="about-content">
+                    <p>Мы не просто готовим к экзаменам — мы учим <strong>думать структурами</strong>. Математика дает
+                        логическую базу, а информатика превращает эту логику в работающий код.</p>
+                    <p>Наши занятия подходят как для тех, кто боится дробей, так и для тех, кто хочет собрать свой первый
+                        сервер или сдать ЕГЭ на 90+.</p>
+                </div>
+    
+                <!-- Карточки преимуществ -->
+                <div class="features-container">
+                    <div class="feature-item">
+                        <div class="feature-icon">∑</div>
+                        <div class="feature-text">
+                            <h3>Живая Математика</h3>
+                            <p>От таблицы умножения до интегралов. Объясняем теоремы через визуализацию и практику, а не
+                                зубрежку формул.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">{ }</div>
+                        <div class="feature-text">
+                            <h3>Deep IT & Код</h3>
+                            <p>Информатика — это не только Word. Это алгоритмы, структуры данных и разработка на Python, JS
+                                и C++.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-text">
+                            <h3>Результат на максимум</h3>
+                            <p>Средний балл наших учеников на ЕГЭ — 87. Мы знаем все "ловушки" составителей экзаменационных
+                                заданий.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Наши направления -->
+<section id="services" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Направления обучения</h2>
+        <div class="grid">
+
+            <!-- Математика -->
+            <article class="card">
+                <div class="card-icon">📐</div>
+                <h3>Математика</h3>
+                <p>От базовой школьной программы до олимпиадного уровня. Подготовка к ВПР, ОГЭ и ЕГЭ (база/профиль).</p>
+                <div class="tags">
+                    <span>Алгебра</span><span>Геометрия</span><span>Логика</span>
+                </div>
+            </article>
+
+            <!-- Информатика -->
+            <article class="card">
+                <div class="card-icon">💾</div>
+                <h3>Информатика</h3>
+                <p>Подготовка к экзаменам (ОГЭ/ЕГЭ). Разбор алгоритмов, систем счисления и основ компьютерной
+                    грамотности.</p>
+                <div class="tags">
+                    <span>ЕГЭ/ОГЭ</span><span>Алгоритмы</span><span>Олимпиады</span>
+                </div>
+            </article>
+
+            <!-- Программирование -->
+            <article class="card featured-card">
+                <div class="card-icon">💻</div>
+                <h3>Программирование</h3>
+                <p>Практическое освоение востребованных технологий и языков для создания IT-проектов.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag html">HTML</span>
+                    <span class="tech-tag css">CSS</span>
+                    <span class="tech-tag js">JS</span>
+                    <span class="tech-tag java">Java</span>
+                    <span class="tech-tag sql">SQL</span>
+                    <span class="tech-tag python">Python</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Цены -->
+    <section id="prices" class="section">
+        <div class="container">
+            <h2 class="section-title">Стоимость обучения</h2>
+            <div class="price-grid">
+    
+                <!-- Разовое занятие -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Старт</h3>
+                        <div class="amount">1 800 ₽ <span>/ 60 мин</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li>Индивидуальный подход</li>
+                        <li>Математика или IT</li>
+                        <li>Разбор домашнего задания</li>
+                        <li>Консультация в TG</li>
+                    </ul>
+                    <a href="#contact" class="price-btn">Начать</a>
+                </div>
+    
+                <!-- Пакет Интенсив (Популярный) -->
+                <div class="price-card popular">
+                    <div class="popular-badge">Популярно</div>
+                    <div class="price-header">
+                        <h3>Интенсив</h3>
+                        <div class="amount">15 000 ₽ <span>/ 10 уроков</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><strong>Экономия 3 000 ₽</strong></li>
+                        <li>Подготовка к ЕГЭ / ОГЭ</li>
+                        <li>Свой IT-проект в портфолио</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <a href="#contact" class="price-btn featured">Выбрать пакет</a>
+                </div>
+    
+                <!-- Групповой курс -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Группа</h3>
+                        <div class="amount">900 ₽ <span>/ занятие</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li>Группы до 4 человек</li>
+                        <li>Соревновательный дух</li>
+                        <li>Обмен опытом с ребятами</li>
+                        <li>Доступ к закрытым чатам</li>
+                    </ul>
+                    <a href="#contact" class="price-btn">Вступить</a>
+                </div>
+    
+            </div>
+            <p class="price-note">Первое ознакомительное занятие (30 мин) — <strong>бесплатно</strong></p>
+        </div>
+    </section>
+
+
+    <!-- Контакты и Футер -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Начните обучение сегодня</h2>
+            <div class="contact-info">
+                <p>Телефон: <strong>+375 (44) 723-14-85</strong></p>
+                <p>Telegram: <strong>@tutor_proIT</strong></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IT-Tutor. Математика и программирование с нуля.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
